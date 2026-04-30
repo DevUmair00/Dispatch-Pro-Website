@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Src/input.css" />
+    <link rel="stylesheet" href="/Src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+
+  <body class="text-text-main">
+    <!-- Navbar -->
+
+    <nav
+      id="navbar"
+      class="sticky z-50 top-0 p-3 flex items-center justify-between bg-primary shadow-secondary/20 shadow-xl"
+    >
+      <a href="/index.html" class="nav-logo flex gap-2 items-center">
+        <img
+          class="object-center h-10"
+          src="/Assests/Logo.png"
+          alt="Dispatch Pro"
+        />
+        <h2 class="text-lg font-medium font-display text-white">
+          Dispatch Pro
+        </h2>
+      </a>
+
+      <div class="nav-items">
+        <ul
+          class="hidden md:flex justify-between items-center lg:gap-9 md:gap-7 gap-4 text-white font-medium"
+        >
+          <li class="nav-item hover:text-gray-300">
+            <a href="/index.html">Home</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/about.html">About Us</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/service.html">Services</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="/Html/contact.html" class="quote-btn">
+        <button
+          class="hidden md:block 1 bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2"
+        >
+          <span>Get Quote</span>
+          &nbsp;
+          <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="bg-primary-dark hidden md:hidden z-10 fixed inset-0 p-3 shadow-orange-900 shadow-5xl"
+      >
+        <div class="flex justify-between">
+          <a href="/index.html" class="nav-logo flex gap-2 items-center">
+            <img
+              class="object-center h-10"
+              src="/Assests/Logo.png"
+              alt="Dispatch Pro"
+            />
+            <span class="text-lg font-medium font-display text-white"
+              >Dispatch Pro</span
+            >
+          </a>
+
+          <button id="menu-close-btn" class="block" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-white text-2xl"></i>
+          </button>
+        </div>
+
+        <div class="nav-items mt-5">
+          <ul>
+            <li>
+              <a
+                href="/index.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/about.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/service.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/pricing.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/contact.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <hr class="text-white" />
+
+        <a href="/Html/contact.html">
+          <button
+            class="quote-btn bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2 mt-5 ml-4"
+          >
+            <span>Get Quote</span>
+            &nbsp;
+            <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="text-white min-h-[80vh]">
+     
+      <!-- heroSection -->
+
+      <section id="about_heroSection"
+        class=" hero-section bg-primary-deeper min-h-0 lg:gap-8 items-start px-[clamp(00.5rem,4%,1.5rem)] py-16"
+      >
+        <div class="flex flex-col items-start justify-center gap-8 px-5">
+
+          <span class="hero-badge shadow-md hover:shadow-xl shadow-secondary/90 bg-text-muted text-white rounded-full text-sm px-4 py-1 hover:-translate-y-1">
+            Who We Are
+          </span>
+
+          <h1 class="hero-title font-bold text-3xl sm:text-5xl leading-tight text-start">
+            Trusted Dispatchers,<br />Built for Drivers
+          </h1>
+
+          <p class="hero-text text-text-muted text-lg leading-relaxed text-start">
+            DispatchPro has been connecting owner-operators and fleets with
+            high-paying loads since 2012.<br />
+            We work for you — not the brokers.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Stat Cards Section -->
+      <section
+        id="statCards"
+        class="card-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 px-12 py-16"
+      >
+        <div
+          class="card bg-gray-300/20 text-center py-7 border border-gray-300 rounded-2xl shadow-gray-600/20 shadow-lg"
+        >
+          <span class="block text-primary-dark font-black text-4xl">500+</span>
+          <span class="block text-gray-600 text-xl">Drivers Served</span>
+        </div>
+
+        <div
+          class="card bg-gray-300/20 text-center py-7 border border-gray-300 rounded-2xl shadow-gray-600/20 shadow-lg"
+        >
+          <span class="block text-primary-dark font-black text-4xl">98%</span>
+          <span class="block text-gray-600 text-xl">On-Time Loads</span>
+        </div>
+
+        <div
+          class="card bg-gray-300/20 text-center py-7 border border-gray-300 rounded-2xl shadow-gray-600/20 shadow-lg"
+        >
+          <span class="block text-primary-dark font-black text-4xl">24/7</span>
+          <span class="block text-gray-600 text-xl">Dispatch Support</span>
+        </div>
+
+        <div
+          class="card bg-gray-300/20 text-center py-7 border border-gray-300 rounded-2xl shadow-gray-600/20 shadow-lg"
+        >
+          <span class="block text-primary-dark font-black text-4xl">12+</span>
+          <span class="block text-gray-600 text-xl">Years Experiences</span>
+        </div>
+      </section>
+
+      <!-- our mission -->
+
+      <section id="ourMissionSection"
+        class="px-[clamp(1rem,5%,2rem)] py-10 bg-text-muted/9 grid lg:grid-cols-2 md:grid-cols-1"
+      >
+        <div id="about_TeamPhoto"
+          class="flex items-center justify-center bg-gray-300/40 rounded-2xl m-10 p-10"
+        >
+          <span class="text-black">Team Photo</span>
+
+        </div>
+
+        <div id="ourMission"
+          class="flex flex-col gap-3 bg-gray-300/80 p-10 rounded-2xl"
+        >
+          <span class="text-secondary text-xl font-semibold">Our Mission</span>
+
+          <h3 class="text-primary-dark text-2xl font-extrabold py-2">
+            We Take the Paperwork. You Take the Wheel.
+          </h3>
+
+          <p class="text-gray-500 text-xl font-normal">
+            Founded in 2012 by a team of logistics professionals, DispatchPro
+            was built with one goal: to help truck drivers maximize their income
+            while we handle all the complexity of load finding, negotiation, and
+            compliance..
+          </p>
+
+          <div class="mt-8">
+            <ul class="flex flex-col gap-4">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-primary text-xs mt-2"></i>
+                <p class="text-text-muted leading-relaxed text-lg">
+                  <strong class="text-primary-dark"
+                    >Driver-first approach:</strong
+                  >
+                  Every decision we make puts your earnings and schedule first.
+                </p>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-primary text-xs mt-2"></i>
+                <p class="text-text-muted leading-relaxed text-lg">
+                  <strong class="text-primary-dark"
+                    >Transparent pricing:</strong
+                  >
+                  Flat monthly fee — no commissions taken from your loads.
+                </p>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-primary text-xs mt-2"></i>
+                <p class="text-text-muted leading-relaxed text-lg">
+                  <strong class="text-primary-dark">24/7 availability:</strong>
+                  A real dispatcher is always available — nights, weekends, and
+                  holidays.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="text-white mb-0">
+      <div
+        class="bg-primary flex flex-col items-left sm:items-center justify-center py-14 px-[clamp(1rem,5%,2rem)] gap-4"
+      >
+        <h2 class="font-bold text-2xl text-secondary/80">
+          Join 500+ Drivers <br class="sm:hidden" />
+          Who Trust DispatchPro
+        </h2>
+
+        <p class="text-gray-300/70 font-normal text-xl">
+          Start with a free quote — no commitment required.
+        </p>
+
+        <a href="/Html/contact.html"
+          ><button
+            class="bg-secondary hover:bg-secondary-hover font-bold text-base rounded-md px-6 py-3"
+          >
+            Get Free Quote
+          </button></a
+        >
+      </div>
+
+      <div
+        class="bg-primary-dark p-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-between"
+      >
+        <a href="/index.html" class="flex gap-2 items-center">
+          <img
+            class="object-center h-10"
+            src="/Assests/Logo.png"
+            alt="Dispatch Pro"
+          />
+          <span class="text-lg font-medium font-display text-white"
+            >Dispatch Pro</span
+          >
+        </a>
+
+        <span class="text-gray-300/50"
+          >© 2026 DispatchPro. All rights reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/JS/script.js"></script>
+  </body>
+</html>

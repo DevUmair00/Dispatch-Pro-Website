@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Src/input.css" />
+    <link rel="stylesheet" href="/Src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Contact / Get Quote — Dispatch Pro</title>
+  </head>
+
+  <body class="text-text-main">
+    <!-- Navbar -->
+
+    <nav
+      id="navbar"
+      class="sticky z-50 top-0 p-3 flex items-center justify-between bg-primary shadow-secondary/20 shadow-xl"
+    >
+      <a href="/index.html" class="nav-logo flex gap-2 items-center">
+        <img
+          class="object-center h-10"
+          src="/Assests/Logo.png"
+          alt="Dispatch Pro"
+        />
+        <h2 class="text-lg font-medium font-display text-white">
+          Dispatch Pro
+        </h2>
+      </a>
+
+      <div class="nav-items">
+        <ul
+          class="hidden md:flex justify-between items-center lg:gap-9 md:gap-7 gap-4 text-white font-medium"
+        >
+          <li class="nav-item hover:text-gray-300">
+            <a href="/index.html">Home</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/about.html">About Us</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/service.html">Services</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="/Html/contact.html" class="quote-btn">
+        <button
+          class="hidden md:block 1 bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2"
+        >
+          <span>Get Quote</span>
+          &nbsp;
+          <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="bg-primary-dark hidden md:hidden z-10 fixed inset-0 p-3 shadow-orange-900 shadow-5xl"
+      >
+        <div class="flex justify-between">
+          <a href="/index.html" class="nav-logo flex gap-2 items-center">
+            <img
+              class="object-center h-10"
+              src="/Assests/Logo.png"
+              alt="Dispatch Pro"
+            />
+            <span class="text-lg font-medium font-display text-white"
+              >Dispatch Pro</span
+            >
+          </a>
+
+          <button id="menu-close-btn" class="block" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-white text-2xl"></i>
+          </button>
+        </div>
+
+        <div class="nav-items mt-5">
+          <ul>
+            <li>
+              <a
+                href="/index.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/about.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/service.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/pricing.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/contact.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <hr class="text-white" />
+
+        <a href="/Html/contact.html">
+          <button
+            class="quote-btn bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2 mt-5 ml-4"
+          >
+            <span>Get Quote</span>
+            &nbsp;
+            <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+
+    <main class="text-white min-h-[85vh]">
+
+      <!--Hero Section --> 
+
+      <section
+        id="contact_heroSection"
+        class="hero-section bg-primary-deeper px-2 py-16"
+      >
+        <div class="flex flex-col items-start md:items-center justify-center gap-5 px-5">
+
+          <h1 class="hero-title font-bold text-3xl md:text-5xl leading-tight text-left md:text-center">
+            Get Your Free <br class="sm:hidden" />
+            Custom Quote
+          </h1>
+
+          <p class="hero-text text-text-muted text-lg leading-relaxed text-left md:text-center">
+            Fill out the form and a dispatcher will <br class="sm:hidden" />
+            call you within 30 minutes.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Contact Grid: Form + Info -->
+
+      <section
+        id="contact_formSection"
+        class="px-12 py-14 grid grid-cols-1 lg:grid-cols-2 gap-10 md:mx-10 lg:mx-2"
+      >
+        <!-- Left: Quote Request Form -->
+        <div class="flex flex-col gap-5">
+          <h3 class="text-primary-dark text-2xl font-extrabold">
+            Quote Request Form
+          </h3>
+
+          <form class="flex flex-col gap-4">
+            <!-- Name Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >First Name *</label
+                >
+                <input
+                  type="text"
+                  placeholder="First name"
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                />
+              </div>
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Last Name *</label
+                >
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                />
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex flex-col gap-1">
+              <label class="text-text-muted text-sm font-medium"
+                >Phone Number *</label
+              >
+              <input
+                type="tel"
+                placeholder="+1 (___) ___-____"
+                class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="flex flex-col gap-1">
+              <label class="text-text-muted text-sm font-medium"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                placeholder="you@email.com"
+                class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+              />
+            </div>
+
+            <!-- Truck Type + Number of Trucks -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Truck Type</label
+                >
+                <select
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                >
+                  <option value="">Select type</option>
+                  <option>Dry Van</option>
+                  <option>Reefer</option>
+                  <option>Flatbed</option>
+                  <option>Step Deck</option>
+                  <option>Lowboy</option>
+                </select>
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Number of Trucks</label
+                >
+                <select
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                >
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5+</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Operating Lanes -->
+            <div class="flex flex-col gap-1">
+              <label class="text-text-muted text-sm font-medium"
+                >Operating States / Preferred Lanes</label
+              >
+              <input
+                type="text"
+                placeholder="e.g. TX to CA, Southeast region…"
+                class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+              />
+            </div>
+
+            <!-- Additional Notes -->
+            <div class="flex flex-col gap-1">
+              <label class="text-text-muted text-sm font-medium"
+                >Additional Notes</label
+              >
+              <textarea
+                rows="4"
+                placeholder="Any special requirements or questions…"
+                class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="bg-secondary hover:bg-secondary-hover text-white font-bold text-base rounded-lg px-6 py-3 flex items-center justify-center gap-2"
+            >
+              Submit Quote Request
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+
+            <p class="text-text-muted text-xs text-center">
+              We respond within 30 minutes during business hours
+            </p>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="flex flex-col gap-4">
+          <h3 class="text-primary-dark text-2xl font-extrabold">
+            Contact Information
+          </h3>
+
+          <div
+            class="flex flex-col gap-4 bg-bg-muted border border-border-main rounded-2xl p-6"
+          >
+            <!-- Phone -->
+            <div class="flex items-start gap-4">
+              <div
+                class="bg-primary rounded-lg w-10 h-10 min-w-10 flex items-center justify-center"
+              >
+                <i class="fa-solid fa-phone text-white text-sm"></i>
+              </div>
+              <div>
+                <p class="text-text-main font-semibold text-sm">Phone</p>
+                <p class="text-text-muted text-sm">
+                  (800) 555-TRUCK · Available 24/7
+                </p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <div
+                class="bg-primary rounded-lg w-10 h-10 min-w-10 flex items-center justify-center"
+              >
+                <i class="fa-solid fa-envelope text-white text-sm"></i>
+              </div>
+              <div>
+                <p class="text-text-main font-semibold text-sm">Email</p>
+                <p class="text-text-muted text-sm">info@dispatchpro.com</p>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-start gap-4">
+              <div
+                class="bg-primary rounded-lg w-10 h-10 min-w-10 flex items-center justify-center"
+              >
+                <i class="fa-solid fa-location-dot text-white text-sm"></i>
+              </div>
+              <div>
+                <p class="text-text-main font-semibold text-sm">Office</p>
+                <p class="text-text-muted text-sm">
+                  1200 Commerce Blvd, Dallas, TX 75201
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white mb-0">
+      <div
+        class="bg-primary-dark p-6 flex flex-col items-center sm:flex-row sm:justify-between"
+      >
+        <a href="/index.html" class="flex gap-2 items-center">
+          <img
+            class="object-center h-10"
+            src="/Assests/Logo.png"
+            alt="Dispatch Pro"
+          />
+          <span class="text-lg font-medium font-display text-white"
+            >Dispatch Pro</span
+          >
+        </a>
+        <span class="text-gray-300/50"
+          >© 2026 DispatchPro. All rights reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/JS/script.js"></script>
+  </body>
+</html>

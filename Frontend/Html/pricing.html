@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Src/input.css" />
+    <link rel="stylesheet" href="/Src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+
+  <body class="text-text-main">
+    <!-- Navbar -->
+
+    <nav
+      id="navbar"
+      class="sticky z-50 top-0 p-3 flex items-center justify-between bg-primary shadow-secondary/20 shadow-xl"
+    >
+      <a href="/index.html" class="nav-logo flex gap-2 items-center">
+        <img
+          class="object-center h-10"
+          src="/Assests/Logo.png"
+          alt="Dispatch Pro"
+        />
+        <h2 class="text-lg font-medium font-display text-white">
+          Dispatch Pro
+        </h2>
+      </a>
+
+      <div class="nav-items">
+        <ul
+          class="hidden md:flex justify-between items-center lg:gap-9 md:gap-7 gap-4 text-white font-medium"
+        >
+          <li class="nav-item hover:text-gray-300">
+            <a href="/index.html">Home</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/about.html">About Us</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/service.html">Services</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="/Html/contact.html" class="quote-btn">
+        <button
+          class="hidden md:block 1 bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2"
+        >
+          <span>Get Quote</span>
+          &nbsp;
+          <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="bg-primary-dark hidden md:hidden z-10 fixed inset-0 p-3 shadow-orange-900 shadow-5xl"
+      >
+        <div class="flex justify-between">
+          <a href="/index.html" class="nav-logo flex gap-2 items-center">
+            <img
+              class="object-center h-10"
+              src="/Assests/Logo.png"
+              alt="Dispatch Pro"
+            />
+            <span class="text-lg font-medium font-display text-white"
+              >Dispatch Pro</span
+            >
+          </a>
+
+          <button id="menu-close-btn" class="block" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-white text-2xl"></i>
+          </button>
+        </div>
+
+        <div class="nav-items mt-5">
+          <ul>
+            <li>
+              <a
+                href="/index.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/about.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/service.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/pricing.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/contact.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <hr class="text-white" />
+
+        <a href="/Html/contact.html">
+          <button
+            class="quote-btn bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2 mt-5 ml-4"
+          >
+            <span>Get Quote</span>
+            &nbsp;
+            <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="text-white min-h-[90vh]">
+
+      <!-- heroSection -->
+      <section id="pricing_heroSection"
+        class="hero-section bg-primary-deeper lg:gap-8 items-start px-[clamp(1rem,5%,2rem)] py-16"
+      >
+        <div class="flex flex-col gap-8 items-start justify-center px-[clamp(1rem,2%,1.5rem)]">
+
+          <h1 class="hero-title font-bold text-3xl sm:text-5xl leading-tight">
+            Transparent Pricing, <br class="lg:hidden" />
+            No Hidden Fees
+          </h1>
+
+          <p class="hero-text text-text-muted text-sm md:text-lg leading-relaxed">
+            Choose the plan that fits your operation.<br class="md:hidden" />All
+            plans include a 7-day free trial.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Monthly Plans -->
+
+      <section
+        id="pricing_MonthlyPlans"
+        class="px-[clamp(1rem,5%,2rem)] py-10 flex flex-col lg:grid grid-cols-3 gap-4 mx-auto max-w-7xl"
+      >
+        <div
+          class="text-primary bg-gray-00/30 rounded-lg border-2 border-secondary/70 p-8 pb-16 gap-3 flex flex-col"
+        >
+          <h4 class="font-normal text-2xl text-black">Starter</h4>
+          <b class="font-black text-5xl">$150</b>
+          <span class="block text-gray-500/80 text-lg">/truck/month</span>
+          <hr class="text-black/20 my-4" />
+
+          <ul class="flex flex-col gap-2 text-black">
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2"
+                >1 truck / owner-operator</span
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2"
+                >Load booking (Mon–Fri)</span
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2">Basic documentation</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2">Email support</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-x"></i>
+              <span class="text-xl font-light text-gray-600/50 pl-2"
+                >24/7 phone support</span
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-x"></i>
+              <span class="text-xl font-light text-gray-600/50 pl-2"
+                >Rate negotiation</span
+              >
+            </li>
+          </ul>
+
+          <a href="#" class="font-bold text-lg">
+            <button
+              type="button"
+              class="mt-3 py-3 px-2 border border-primary-dark rounded-xl w-full text-center hover:text-secondary hover:bg-primary/20"
+            >
+              Get Started
+            </button>
+          </a>
+        </div>
+
+        <div
+          class="text-primary bg-gray-300/20 rounded-lg border-4 border-primary-dark p-8 pb-16 gap-2 flex flex-col"
+        >
+          <span class="bg-secondary py-1 px-4 rounded-2xl w-fit text-white"
+            >Most Popular</span
+          >
+          <h4 class="font-normal text-2xl text-black">Professional</h4>
+          <b class="font-black text-5xl text-secondary">$250</b>
+          <span class="block text-gray-500/80 text-lg">/truck/month</span>
+          <hr class="text-black/20 my-4" />
+
+          <ul class="flex flex-col gap-2 text-black">
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2">1–5 trucks</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2">Load booking 24/7)</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2"
+                >Full documentation suite</span
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light text-black pl-2"
+                >24/7 phone support</span
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light text-black pl-2"
+                >Rate negotiation</span
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light text-black pl-2"
+                >Monthly performance report</span
+              >
+            </li>
+          </ul>
+
+          <a href="#" class="font-bold text-lg">
+            <button
+              type="button"
+              class="mt-3 py-3 px-2 border border-primary-dark bg-primary rounded-xl w-full text-center text-white hover:text-secondary hover:bg-primary/20 transition-all"
+            >
+              Get Started
+            </button>
+          </a>
+        </div>
+
+        <div
+          class="text-primary bg-gray-300/20 rounded-lg border-2 border-secondary/70 p-8 pb-16 gap-1 flex flex-col"
+        >
+          <h4 class="font-normal text-2xl text-black mb-2">
+            Fleet / Enterprise
+          </h4>
+          <b class="font-black text-4xl">Custom</b>
+          <span class="block text-gray-500/80 text-lg"
+            >Contact us for fleet pricing</span
+          >
+          <hr class="text-black/20 my-4" />
+
+          <ul class="flex flex-col gap-2 text-black">
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2"
+                >6+ trucks / full fleet</span
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2"
+                >Dedicated dispatcher team</span
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2">Priority load access</span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light pl-2"
+                >Dedicated account manager
+              </span>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <span class="text-xl font-light text-black pl-2"
+                >Weekly strategy calls</span
+              >
+            </li>
+          </ul>
+
+          <a href="#" class="font-bold text-lg">
+            <button
+              type="button"
+              class="mt-10 py-3 px-2 border border-primary-dark rounded-xl w-full text-center hover:text-secondary hover:bg-primary/20"
+            >
+              Contact Sales
+            </button>
+          </a>
+        </div>
+      </section>
+
+      <div
+        class="bg-primary/5 flex items-center justify-center p-3 mx-5 my-4 rounded-lg"
+      >
+        <h4 class="text-primary text-sm sm:text-lg font-normal text-center">
+          All plans include a 7-day free trial. <br class="md:hidden" />
+          No credit card required. Cancel anytime.
+        </h4>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="text-white mb-0">
+      <div
+        class="bg-primary flex flex-col items-start sm:items-center py-10 px-4 gap-6"
+      >
+        <h2 class="font-black text-2xl text-secondary/70">
+          Start Your 7-Day Free Trial
+        </h2>
+
+        <p class="text-gray-300/70 font-normal text-xl">
+          No credit card required. Full access from day one.
+        </p>
+
+        <a href="/Html/contact.html"
+          ><button
+            class="bg-secondary hover:bg-secondary-hover font-bold text-base rounded-md px-6 py-3 text-center flex items-center gap-2"
+          >
+            Get Started Free
+            <i class="fa-solid fa-arrow-right-long"></i></button
+        ></a>
+      </div>
+
+      <div
+        class="bg-primary-dark p-6 gap-2 flex flex-col items-center sm:flex-row sm:justify-between"
+      >
+        <a href="/index.html" class="flex gap-2 items-center">
+          <img
+            class="object-center h-10"
+            src="/Assests/Logo.png"
+            alt="Dispatch Pro"
+          />
+          <span class="text-lg font-medium font-display text-white"
+            >Dispatch Pro</span
+          >
+        </a>
+
+        <span class="text-gray-300/50"
+          >© 2026 DispatchPro. All rights reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/JS/script.js"></script>
+  </body>
+</html>

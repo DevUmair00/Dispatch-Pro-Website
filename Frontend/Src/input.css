@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  /* ── Brand Colors ── */
+  --primary:        #1E3A8A;   /* Navy blue — navbar, headings, buttons */
+  --primary-dark:   #0F2564;   /* Deeper navy — hero background */
+  --primary-deeper: #0F1F4D;   /* Darkest navy — footer background */
+
+  --secondary:      #F97316;   /* Orange — CTA buttons, accents, highlights */
+  --secondary-hover:#EA6C0A;   /* Darker orange — button hover state */
+  --secondary-light:#FB923C;   /* Light orange — badges, tags */
+
+  /* ── Backgrounds ── */
+  --bg:             #F3F4F6;   /* Page background */
+  --bg-card:        #FFFFFF;   /* Card / form background */
+  --bg-muted:       #E5E7EB;   /* Subtle section background */
+
+  /* ── Text ── */
+  --text:           #1F2937;   /* Primary body text */
+  --text-muted:     #6B7280;   /* Labels, subtitles, captions */
+  --text-light:     #9CA3AF;   /* Placeholder text, hints */
+  --text-white:     #FFFFFF;   /* Text on dark backgrounds */
+
+  /* ── Borders ── */
+  --border:         #D1D5DB;   /* Card borders, input borders */
+  --border-light:   #E5E7EB;   /* Dividers, subtle separators */
+
+  /* ── Status Colors ── */
+  --success:        #16A34A;   /* Checkmarks, success states */
+  --error:          #DC2626;   /* Form errors, warnings */
+}
+
+
+@theme {
+  --color-primary:          var(--primary);
+  --color-primary-dark:     var(--primary-dark);
+  --color-primary-deeper:   var(--primary-deeper);
+  --color-secondary:        var(--secondary);
+  --color-secondary-hover:  var(--secondary-hover);
+  --color-secondary-light:  var(--secondary-light);
+  --color-bg-muted:         var(--bg-muted);
+  --color-bg-card:          var(--bg-card);
+  --color-text-main:        var(--text);
+  --color-text-muted:       var(--text-muted);
+  --color-border-main:      var(--border);
+}

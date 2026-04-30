@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Src/input.css" />
+    <link rel="stylesheet" href="/Src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+
+  <body class="text-text-main">
+    <!-- Navbar -->
+
+    <nav
+      id="navbar"
+      class="sticky z-50 top-0 p-3 flex items-center justify-between bg-primary shadow-secondary/20 shadow-xl"
+    >
+      <a href="/index.html" class="nav-logo flex gap-2 items-center">
+        <img
+          class="object-center h-10"
+          src="/Assests/Logo.png"
+          alt="Dispatch Pro"
+        />
+        <h2 class="text-lg font-medium font-display text-white">
+          Dispatch Pro
+        </h2>
+      </a>
+
+      <div class="nav-items">
+        <ul
+          class="hidden md:flex justify-between items-center lg:gap-9 md:gap-7 gap-4 text-white font-medium"
+        >
+          <li class="nav-item hover:text-gray-300">
+            <a href="/index.html">Home</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/about.html">About Us</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/service.html">Services</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="/Html/contact.html" class="quote-btn">
+        <button
+          class="hidden md:block 1 bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2"
+        >
+          <span>Get Quote</span>
+          &nbsp;
+          <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="bg-primary-dark hidden md:hidden z-10 fixed inset-0 p-3 shadow-orange-900 shadow-5xl"
+      >
+        <div class="flex justify-between">
+          <a href="/index.html" class="nav-logo flex gap-2 items-center">
+            <img
+              class="object-center h-10"
+              src="/Assests/Logo.png"
+              alt="Dispatch Pro"
+            />
+            <span class="text-lg font-medium font-display text-white"
+              >Dispatch Pro</span
+            >
+          </a>
+
+          <button id="menu-close-btn" class="block" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-white text-2xl"></i>
+          </button>
+        </div>
+
+        <div class="nav-items mt-5">
+          <ul>
+            <li>
+              <a
+                href="/index.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/about.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/service.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/pricing.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/contact.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <hr class="text-white" />
+
+        <a href="/Html/contact.html">
+          <button
+            class="quote-btn bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2 mt-5 ml-4"
+          >
+            <span>Get Quote</span>
+            &nbsp;
+            <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="text-white min-h-[80vh]">
+      
+      <!-- heroSection -->
+
+      <section  id="about_heroSection"
+        class="hero-section bg-primary-deeper min-h-0 lg:gap-8 items-centerpx-[clamp(1rem,5%,2rem)] py-16"
+      >
+        <div class="flex flex-col items-center justify-center gap-5 px-5"s>
+
+          <h1 class="hero-title font-bold text-5xl leading-tight">Our Services</h1>
+
+          <p class="hero-text text-text-muted text-lg leading-relaxed text-center">
+            Everything your operation needs — handled by experienced dispatchers
+            who know the industry.</p>
+
+        </div>
+
+      </section>
+
+      <!-- Our Responsibilities -->
+
+      <section
+        id="service_ResponsibilitiesCards"
+        class="px-12 py-10 grid grid-cols-1 sm:grid-cols-2 gap-4"
+      >
+        <div
+          class="border-t-6 rounded-xl border-2 border-secondary flex flex-col justify-start items-start gap-2 p-6"
+        >
+          <div class="bg-primary-dark p-3 rounded-2xl">
+            <i class="fa-solid fa-cube text-5xl"></i>
+          </div>
+
+          <h3 class="text-primary text-xl font-semibold">Load Booking</h3>
+
+          <p class="text-primary font-light text-xl">
+            We find and negotiate the best-paying loads from top brokers on your
+            behalf.
+          </p>
+        </div>
+
+        <div
+          class="border-t-6 rounded-xl border-2 border-secondary flex flex-col justify-start items-start gap-2 p-6"
+        >
+          <div class="bg-primary-dark p-3 rounded-2xl">
+            <i class="fa-solid fa-route text-5xl"></i>
+          </div>
+
+          <h3 class="text-primary text-xl font-semibold">Route Planning</h3>
+
+          <p class="text-primary font-light text-xl">
+            Optimized routes to reduce empty miles and maximize your revenue per
+            mile.
+          </p>
+        </div>
+
+        <div
+          class="border-t-6 rounded-xl border-2 border-secondary flex flex-col justify-start items-start gap-2 p-6"
+        >
+          <div class="bg-primary-dark p-3 rounded-2xl">
+            <i class="fa-solid fa-file-lines text-5xl"></i>
+          </div>
+
+          <h3 class="text-primary text-xl font-semibold">Documentation</h3>
+
+          <p class="text-primary font-light text-xl">
+            Rate confirmations, BOLs, invoicing and compliance paperwork — all
+            handled.
+          </p>
+        </div>
+
+        <div
+          class="border-t-6 rounded-xl border-2 border-secondary flex flex-col justify-start items-start gap-2 p-6"
+        >
+          <div class="bg-primary-dark p-3 rounded-2xl">
+            <i class="fa-solid fa-handshake text-5xl"></i>
+          </div>
+
+          <h3 class="text-primary text-xl font-semibold">
+            24/7 Driver Support
+          </h3>
+
+          <p class="text-primary font-light text-xl">
+            Your dedicated dispatcher is reachable around the clock by phone,
+            text, and email.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="text-white mb-0">
+      <div
+        class="bg-primary flex flex-col items-left sm:items-center justify-center py-14 px-[clamp(1rem,5%,2rem)] gap-6"
+      >
+        <h2 class="font-bold text-xl sm:text-2xl text-secondary/80">
+          Ready to Put These Services to Work?
+        </h2>
+
+        <p class="text-gray-300/70 font-normal text-xl">
+          Get a free consultation and custom quote for your operation.
+        </p>
+
+        <a href="/Html/contact.html"
+          ><button
+            class="bg-secondary hover:bg-secondary-hover font-bold text-base rounded-md px-6 py-3"
+          >
+            Get Free Quote
+          </button></a
+        >
+      </div>
+
+      <div
+        class="bg-primary-dark p-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-between"
+      >
+        <a href="/index.html" class="flex gap-2 items-center">
+          <img
+            class="object-center h-10"
+            src="/Assests/Logo.png"
+            alt="Dispatch Pro"
+          />
+          <span class="text-lg font-medium font-display text-white"
+            >Dispatch Pro</span
+          >
+        </a>
+
+        <span class="text-gray-300/50"
+          >© 2026 DispatchPro. All rights reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/JS/script.js"></script>
+  </body>
+</html>

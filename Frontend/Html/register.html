@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Src/input.css" />
+    <link rel="stylesheet" href="/Src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Contact / Get Quote — Dispatch Pro</title>
+  </head>
+
+  <body class="text-text-main">
+    <!-- Navbar -->
+
+    <nav
+      id="navbar"
+      class="sticky z-50 top-0 p-3 flex items-center justify-between bg-primary shadow-secondary/20 shadow-xl"
+    >
+      <a href="/index.html" class="nav-logo flex gap-2 items-center">
+        <img
+          class="object-center h-10"
+          src="/Assests/Logo.png"
+          alt="Dispatch Pro"
+        />
+        <h2 class="text-lg font-medium font-display text-white">
+          Dispatch Pro
+        </h2>
+      </a>
+
+      <div class="nav-items">
+        <ul
+          class="hidden md:flex justify-between items-center lg:gap-9 md:gap-7 gap-4 text-white font-medium"
+        >
+          <li class="nav-item hover:text-gray-300">
+            <a href="/index.html">Home</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/about.html">About Us</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/service.html">Services</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item hover:text-gray-300">
+            <a href="/Html/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="/Html/contact.html" class="quote-btn">
+        <button
+          class="hidden md:block 1 bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2"
+        >
+          <span>Get Quote</span>
+          &nbsp;
+          <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+        </button>
+      </a>
+
+      <button id="menu-toggle" class="md:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="bg-primary-dark hidden md:hidden z-10 fixed inset-0 p-3 shadow-orange-900 shadow-5xl"
+      >
+        <div class="flex justify-between">
+          <a href="/index.html" class="nav-logo flex gap-2 items-center">
+            <img
+              class="object-center h-10"
+              src="/Assests/Logo.png"
+              alt="Dispatch Pro"
+            />
+            <span class="text-lg font-medium font-display text-white"
+              >Dispatch Pro</span
+            >
+          </a>
+
+          <button id="menu-close-btn" class="block" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-white text-2xl"></i>
+          </button>
+        </div>
+
+        <div class="nav-items mt-5">
+          <ul>
+            <li>
+              <a
+                href="/index.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/about.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/service.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/pricing.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="/Html/contact.html"
+                class="nav-item text-white font-medium m-3 p-3 rounded block hover:text-gray-300 hover:bg-primary"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <hr class="text-white" />
+
+        <a href="/Html/contact.html">
+          <button
+            class="quote-btn bg-secondary hover:bg-secondary-hover hover:font-medium rounded-md px-4 py-2 mt-5 ml-4"
+          >
+            <span>Get Quote</span>
+            &nbsp;
+            <i class="quote-btn-arrow fa-solid fa-arrow-right"></i>
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="text-white min-h-[85vh]">
+     
+      <!-- Hero Section -->
+     
+      <section id="contact_heroSection"
+        class="hero-section bg-primary-deeper px-2 py-16"
+      >
+        <div class="flex flex-col items-start md:items-center justify-center gap-5 px-5">
+
+          <span class="hero-badge px-4 py-2 bg-secondary/30 text-secondary rounded-full">
+            Join 500+ Drivers
+          </span>
+
+          <h1 class="hero-title font-bold text-3xl md:text-5xl leading-tight text-left md:text-center">
+            Register as a Driver
+          </h1>
+
+          <p class="hero-text text-text-muted text-lg leading-relaxed text-left md:text-center">
+            Complete the form below.<br class="sm:hidden" />
+            We'll review your profile and contact you within 24 hours.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Contact Grid: Form + Info -->
+
+      <section
+        id="contact_formSection"
+        class="px-5 py-14 flex flex-col gap-10 my-10 mx-[clamp(1rem,3%,2rem)] bg-gray-400/40 rounded-lg"
+      >
+        <form class="flex flex-col gap-4">
+          <!-- Personal & Contact Information -->
+
+          <div class="flex flex-col gap-6">
+            <h2 class="text-primary font-bold text-2xl">
+              Personal & Contact Information
+            </h2>
+
+            <!-- Name Row -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >First Name *</label
+                >
+                <input
+                  type="text"
+                  placeholder="First name"
+                  required
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                />
+              </div>
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Last Name *</label
+                >
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  required
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                />
+              </div>
+            </div>
+
+            <!-- Phone & Email -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Phone -->
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Phone Number *</label
+                >
+                <input
+                  type="tel"
+                  required
+                  placeholder="+1 (___) ___-____"
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Email Address *</label
+                >
+                <input
+                  type="email"
+                  required
+                  placeholder="you@email.com"
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                />
+              </div>
+            </div>
+
+            <!-- Operation & Experience -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- State -->
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >State of Operation *</label
+                >
+                <select
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                  required
+                >
+                  <option value="">Select State</option>
+                  <option>Chicago</option>
+                  <option>North America</option>
+                  <option>South America</option>
+                  <option>Colorado</option>
+                  <option>California</option>
+                </select>
+              </div>
+
+              <!-- Years of Experience -->
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Years of Experience *</label
+                >
+                <select
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                  required
+                >
+                  <option value="">Select</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5+</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Equipment Details -->
+
+          <div class="flex flex-col gap-6 mt-8">
+            <h2 class="text-primary font-bold text-2xl">Equipment Details</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Truck Type -->
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Truck Type</label
+                >
+
+                <select
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                >
+                  <option value="">Select type</option>
+                  <option>Dry Van</option>
+                  <option>Reefer</option>
+                  <option>Flatbed</option>
+                  <option>Step Deck</option>
+                  <option>Lowboy</option>
+                </select>
+              </div>
+
+              <!-- No of Trucks -->
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Number of Trucks</label
+                >
+
+                <select
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                  required
+                >
+                  <option value="">Select</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5+</option>
+                </select>
+              </div>
+
+              <!-- MC / DOT Number -->
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >MC / DOT Number *</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="MC-XXXXXXX"
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                />
+              </div>
+
+              <!-- Truck Year -->
+              <div class="flex flex-col gap-1">
+                <label class="text-text-muted text-sm font-medium"
+                  >Truck Year</label
+                >
+                <input
+                  type="email"
+                  required
+                  placeholder="2020"
+                  class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+                />
+              </div>
+            </div>
+
+            <!-- Preferred Operating Lanes -->
+
+            <div class="flex flex-col gap-1">
+              <label class="text-text-muted text-sm font-medium"
+                >Preferred Operating Lanes</label
+              >
+              <input
+                type="text"
+                required
+                placeholder="e.g. TX to CA, Southeast region…"
+                class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
+              />
+            </div>
+          </div>
+
+          <!-- Additional Information -->
+
+          <h4
+            class="text-black/60 text-center my-10 text-sm sm:text-lg md:text-xl lg:text-2xl"
+          >
+            I agree to the Dispatcher Service Agreement and authorize
+            DispatchPro to negotiate loads on my behalf.
+          </h4>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="bg-secondary hover:bg-secondary-hover text-white font-bold text-base rounded-lg px-6 py-3 flex items-center justify-center gap-2"
+          >
+            Submit Registration
+            <i class="fa-solid fa-arrow-right-long mt-1"></i>
+          </button>
+
+          <p class="text-text-muted text-xs text-center">
+            Your information is encrypted and never shared with third parties.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white mb-0">
+      <div
+        class="bg-primary-dark p-6 flex flex-col items-center sm:flex-row sm:justify-between"
+      >
+        <a href="/index.html" class="flex gap-2 items-center">
+          <img
+            class="object-center h-10"
+            src="/Assests/Logo.png"
+            alt="Dispatch Pro"
+          />
+          <span class="text-lg font-medium font-display text-white"
+            >Dispatch Pro</span
+          >
+        </a>
+        <span class="text-gray-300/50"
+          >© 2026 DispatchPro. All rights reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/JS/script.js"></script>
+  </body>
+</html>
