@@ -1,8 +1,7 @@
-package com.dispatchpro.Model;
+package com.dispatchpro.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.Length;
 
 @Entity
 @Data
