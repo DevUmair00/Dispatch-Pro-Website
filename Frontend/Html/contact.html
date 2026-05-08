@@ -179,7 +179,7 @@
             Quote Request Form
           </h3>
 
-          <form class="flex flex-col gap-4">
+          <form id="contactForm" class="flex flex-col gap-4">
             <!-- Name Row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="flex flex-col gap-1">
@@ -188,6 +188,9 @@
                 >
                 <input
                   type="text"
+                  id="first-name"
+                  name="firstname"
+                  required
                   placeholder="First name"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                 />
@@ -198,6 +201,9 @@
                 >
                 <input
                   type="text"
+                  id="last-name"
+                  name="lastname"
+                  required
                   placeholder="Last name"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                 />
@@ -211,6 +217,9 @@
               >
               <input
                 type="tel"
+                id="phone"
+                name="phone"
+                required
                 placeholder="+1 (___) ___-____"
                 class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
               />
@@ -223,6 +232,8 @@
               >
               <input
                 type="email"
+                id="email"
+                name="email"
                 placeholder="you@email.com"
                 class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
               />
@@ -235,9 +246,11 @@
                   >Truck Type</label
                 >
                 <select
+                  id="truck-type"
+                  name="truckType"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                 >
-                  <option value="">Select type</option>
+                  <option value="" selected >Select type</option>
                   <option>Dry Van</option>
                   <option>Reefer</option>
                   <option>Flatbed</option>
@@ -251,6 +264,8 @@
                   >Number of Trucks</label
                 >
                 <select
+                  id="number-of-trucks"
+                  name="numberOfTrucks"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                 >
                   <option>1</option>
@@ -269,6 +284,8 @@
               >
               <input
                 type="text"
+                id="operating-lanes"
+                name="operatingLanes"
                 placeholder="e.g. TX to CA, Southeast region…"
                 class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
               />
@@ -280,6 +297,8 @@
                 >Additional Notes</label
               >
               <textarea
+                id="additional-notes"
+                name="additionalNotes"
                 rows="4"
                 placeholder="Any special requirements or questions…"
                 class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary resize-none"
@@ -299,6 +318,7 @@
               We respond within 30 minutes during business hours
             </p>
           </form>
+
         </div>
 
         <!-- Right: Contact Info -->
@@ -387,5 +407,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="/JS/script.js"></script>
+    <script src="/JS/contact.js"></script>
   </body>
 </html>
