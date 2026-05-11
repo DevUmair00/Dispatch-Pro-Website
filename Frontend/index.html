@@ -133,20 +133,35 @@
 
           <div class="bg-white/10 border border-white/15 rounded-xl p-6 w-full max-w-md mx-auto">
             
-            <form class="hero-form flex flex-col gap-3">
+            <form 
+        
+              id="instantContactForm"
+              class="hero-form flex flex-col gap-3">
 
               <h3 class="hero-title font-bold text-xl mb-1">Get an Instant Quote</h3>
 
-              <input type="text" required placeholder="Your Name"
+              <input type="text" 
+                id ="name"
+                name="name"
+                required placeholder="Your Name"
                 class="form-input w-full bg-white/10 border border-white/20 rounded-md px-3 py-2.5 placeholder-white/40 text-sm outline-none focus:border-secondary" />
 
-              <input type="tel" required placeholder="Phone Number"
+              <input type="tel"
+                id="phone"
+                name="phone"
+                required placeholder="Phone Number"
                 class="form-input w-full bg-white/10 border border-white/20 rounded-md px-3 py-2.5 placeholder-white/40 text-sm outline-none focus:border-secondary" />
 
-              <input type="text" required placeholder="Truck Type (Dry Van, Flatbed...)"
+              <input type="text" 
+                id="truck-type"
+                name="truckType"
+                required placeholder="Truck Type (Dry Van, Flatbed...)"
                 class="form-input w-full bg-white/10 border border-white/20 rounded-md px-3 py-2.5 placeholder-white/40 text-sm outline-none focus:border-secondary" />
 
-              <input type="text" required placeholder="Operating State(s)"
+              <input type="text"
+                id="operating-lanes"
+                name="operatingLanes"
+                required placeholder="Operating State(s)"
                 class="form-input w-full bg-white/10 border border-white/20 rounded-md px-3 py-2.5 placeholder-white/40 text-sm outline-none focus:border-secondary" />
 
               <button type="submit"
@@ -335,6 +350,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="/JS/script.js"></script>
-      <script src="/JS/main.js"></script>
+      <script src="/JS/indexContact.js"></script>
 </body>
 </html>

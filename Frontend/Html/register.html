@@ -174,7 +174,7 @@
         id="contact_formSection"
         class="px-5 py-14 flex flex-col gap-10 my-10 mx-[clamp(1rem,3%,2rem)] bg-gray-400/40 rounded-lg"
       >
-        <form class="flex flex-col gap-4">
+        <form id="registerForm" class="flex flex-col gap-4">
           <!-- Personal & Contact Information -->
 
           <div class="flex flex-col gap-6">
@@ -191,7 +191,9 @@
                 >
                 <input
                   type="text"
+                  id="first_Name"
                   placeholder="First name"
+                  name="firstName"
                   required
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                 />
@@ -202,7 +204,9 @@
                 >
                 <input
                   type="text"
+                  id="last_Name"
                   placeholder="Last name"
+                  name="lastName"
                   required
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                 />
@@ -219,6 +223,8 @@
                 >
                 <input
                   type="tel"
+                  id="phone"
+                  name="phone"
                   required
                   placeholder="+1 (___) ___-____"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
@@ -232,6 +238,8 @@
                 >
                 <input
                   type="email"
+                  id="email"
+                  name="email"
                   required
                   placeholder="you@email.com"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
@@ -248,6 +256,8 @@
                   >State of Operation *</label
                 >
                 <select
+                  id="operating-state"
+                  name="operatingState"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                   required
                 >
@@ -266,6 +276,8 @@
                   >Years of Experience *</label
                 >
                 <select
+                  id="years-of-experience"
+                  name="yearsOfExperience"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                   required
                 >
@@ -293,6 +305,8 @@
                 >
 
                 <select
+                  id="truck-type"
+                  name="truckType"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                 >
                   <option value="">Select type</option>
@@ -311,6 +325,8 @@
                 >
 
                 <select
+                  id="number-of-trucks"
+                  name="numberOfTrucks"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
                   required
                 >
@@ -330,6 +346,8 @@
                 >
                 <input
                   type="text"
+                  id="mc-dot-number"
+                  name="mcDotNumber"
                   required
                   placeholder="MC-XXXXXXX"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
@@ -342,7 +360,9 @@
                   >Truck Year</label
                 >
                 <input
-                  type="email"
+                  type="number"
+                  id="truck-year"
+                  name="truckYear"
                   required
                   placeholder="2020"
                   class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
@@ -358,6 +378,8 @@
               >
               <input
                 type="text"
+                id="operating-Lanes"
+                name="operatingLanes"
                 required
                 placeholder="e.g. TX to CA, Southeast region…"
                 class="border border-border-main rounded-lg px-4 py-3 text-text-main bg-bg-muted text-sm outline-none focus:border-secondary"
@@ -419,5 +441,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="/JS/script.js"></script>
+    <script src="/JS/register.js"></script>
   </body>
 </html>
